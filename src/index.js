@@ -8,6 +8,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+      <df-messenger
+        df-cx="true"
+        location="us-central1"
+        chat-title="NIssan-POC-test-drive-booking"
+        agent-id="61362012-3606-4a51-a1a9-ed5e2fb538a2"
+        language-code="en"
+      ></df-messenger>
   </React.StrictMode>
 );
 
