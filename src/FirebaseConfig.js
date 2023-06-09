@@ -1,9 +1,3 @@
-/* import firebase from "firebase/compat/app";
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import 'firebase/compat/storage';
- */
-
 import { initializeApp } from 'firebase/app';
 
 /*const config= {
@@ -25,19 +19,6 @@ const firebaseConfig = {
   appId: "1:43554139626:web:387cf413a6dd0bf3379693",
   measurementId: "G-8JZ7LTCVTM"
 };
-
-/*const firebaseConfig = {
-  apiKey: "AIzaSyDUfyKvcKEsn4CSHCqf_goY_uiyMabxkuk",
-  authDomain: "nissan-emea-nissan-emea-poc.firebaseapp.com",
-  projectId: "nissan-emea-nissan-emea-poc",
-  storageBucket: "nissan-emea-nissan-emea-poc.appspot.com",
-  messagingSenderId: "664030411126",
-  appId: "1:664030411126:web:09ed37b70476c5eacaa257"
-};*/
-
-/*if(!firebase.app.length) {
-  firebase.initializeApp(config);
-}*/
 
 const firebaseApp = initializeApp(firebaseConfig);
 
