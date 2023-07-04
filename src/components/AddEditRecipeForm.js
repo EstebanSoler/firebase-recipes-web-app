@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-//import ImageUploadPreview from "./ImageUploadPreview";
+import ImageUploadPreview from "./ImageUploadPreview";
 
 function AddEditRecipeForm({
   existingRecipe,
@@ -18,7 +18,7 @@ function AddEditRecipeForm({
       setDirections(existingRecipe.directions);
       setPublishDate(existingRecipe.publishDate.toISOString().split("T")[0]);
       setIngredients(existingRecipe.ingredients);
-      //setImageUrl(existingRecipe.imageUrl);
+      setImageUrl(existingRecipe.imageUrl);
     } else {
       resetForm();
     }
@@ -111,12 +111,12 @@ function AddEditRecipeForm({
       <div className="top-form-section">
         <div className="image-input-box">
           Recipe Image
-          {/* <ImageUploadPreview
+          <ImageUploadPreview
             basePath="recipes"
             existingImageUrl={imageUrl}
             handleUploadFinish={(downloadUrl) => setImageUrl(downloadUrl)}
             handleUploadCancel={() => setImageUrl("")}
-          ></ImageUploadPreview> */}
+          ></ImageUploadPreview>
         </div>
         <div className="fields">
           <label className="recipe-label input-label">
