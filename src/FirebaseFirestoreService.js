@@ -15,7 +15,8 @@ import {
   startAfter
 } from "firebase/firestore";
 
-const firestoreDb = getFirestore(firebaseApp);
+const firestoreDb = firebaseApp.firestore;
+//const firestoreDb = getFirestore(firebaseApp);
 
 const createDocument = async(collectionName, document) => {
   

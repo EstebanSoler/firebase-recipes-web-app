@@ -9,16 +9,16 @@ import {
 } from 'firebase/storage';
 
 console.log('firebaseApp', firebaseApp);
-//const storage = firebaseApp.storage;
-const storage = getStorage(firebaseApp);
+const storage = firebaseApp.storage;
+//const storage = getStorage(firebaseApp);
 console.log('storage', storage);
 
 const uploadFile = (file, fullFilePath, progressCallback) => {
-  console.log('file', file);
-  console.log('fullFilePath', fullFilePath);
-  console.log('storage', storage);
+  // console.log('file', file);
+  // console.log('fullFilePath', fullFilePath);
+  // console.log('storage', storage);
   const uploadRef = ref(storage, fullFilePath);
-  console.log('uploadRef ',uploadRef);
+ // console.log('uploadRef ',uploadRef);
   const uploadTask = uploadBytesResumable(uploadRef, file);
 
   uploadTask.on(

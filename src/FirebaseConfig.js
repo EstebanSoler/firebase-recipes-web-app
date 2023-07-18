@@ -1,4 +1,8 @@
 import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+//import { getFirestore } from 'firebase/firestore/lite';
+import { getStorage } from 'firebase/storage';
 
 /*const config= {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -10,7 +14,7 @@ import { initializeApp } from 'firebase/app';
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };*/
 
-const firebaseConfig = {
+const config = {
   apiKey: "AIzaSyCzVUJLjqVVllIREtA6U6cSoELZe6fMDXU",
   authDomain: "fir-recipes-c99a9.firebaseapp.com",
   projectId: "fir-recipes-c99a9",
@@ -20,6 +24,17 @@ const firebaseConfig = {
   measurementId: "G-8JZ7LTCVTM"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(config);
+const auth = getAuth(firebaseApp);
+const firestore = getFirestore(firebaseApp);
+const storage = getStorage(firebaseApp);
 
-export default firebaseApp;
+const firebaseConfig = {
+  auth,
+  firestore,
+  storage,
+};
+
+//export default firebaseApp;
+
+export default firebaseConfig;

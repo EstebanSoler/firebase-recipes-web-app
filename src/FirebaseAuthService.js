@@ -1,4 +1,5 @@
 import firebaseApp from "./FirebaseConfig";
+
 import { getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -9,9 +10,8 @@ import { getAuth,
   signInWithPopup,
 } from "firebase/auth";
 
-console.log(firebaseApp);
-const auth = getAuth(firebaseApp);
-console.log(auth);
+//const auth = getAuth(firebaseApp);
+const auth = firebaseApp.auth;
 
 const registerUser = (email, password) => {
   return createUserWithEmailAndPassword(auth, email, password);
